@@ -5,13 +5,16 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { EditUserComponent } from './edit-user/edit-user.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { AddUserComponent } from './add-user/add-user.component';
+
+import { ROUTES } from './app.router';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { UsersListComponent } from './components/users-list/user-list.component';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { UsersService } from './services/users.service';
 
 @NgModule({
   declarations: [
-    AppComponent, UsersListComponent, EditUserComponent, UserListComponent, AddUserComponent
+    AppComponent, UsersListComponent, AddUserComponent, EditUserComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,7 @@ import { AddUserComponent } from './add-user/add-user.component';
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

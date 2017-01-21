@@ -9,7 +9,7 @@ import { UsersService } from './../../services/users.service';
         <div>Users list</div>
         <ul>
             <li *ngFor="let user of users">
-                {{user.name}}              
+               <a [routerLink]="['/edit', user.id]">{{user.name}}</a>             
             </li>
         </ul>
     `,

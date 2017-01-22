@@ -8,10 +8,11 @@ import { UsersService } from './../../services/users.service';
     template: `
         <div>Users list</div>
         <ul>
-            <li *ngFor="let user of users">
-               <a [routerLink]="['/edit', user.id]">{{user.name}}</a>             
+            <li *ngFor="let user of users" >
+               <a [routerLink]="['/edit', user.id]">{{user.name}}</a>
             </li>
         </ul>
+        <button [routerLink]="['/add']">Add</button>
     `,
 })
 export class UsersListComponent implements OnInit {

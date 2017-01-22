@@ -10,7 +10,7 @@ import { UsersService } from './../../services/users.service';
         <h2>Add user</h2>
         <form novalidate (ngSubmit)="createUser(name)">
             <input name="name" type="text" placeholder="name" #name>
-            <button>Submit</button>
+            <button class="btn btn-primary">Submit</button>
          </form>
         </div>
     `

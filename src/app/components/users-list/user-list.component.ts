@@ -10,10 +10,10 @@ import { UsersService } from './../../services/users.service';
         <ul>
             <li *ngFor="let user of users" >
                <a [routerLink]="['/edit', user.id]">{{user.name}}</a>
-               <button (click)="deleteUser(user.id)">x</button>
+               <button class="btn btn-danger" (click)="deleteUser(user.id)">x</button>
             </li>
         </ul>
-        <button [routerLink]="['/add']">Add</button>
+        <button class="btn btn-primary" [routerLink]="['/add']">Add user</button>
     `,
 })
 export class UsersListComponent implements OnInit {
